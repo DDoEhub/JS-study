@@ -1,0 +1,90 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 10px;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgb(236, 236, 236);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.ci {
+  width: 60px;
+  height: 60px;
+  border: 2px solid hsla(150 70% 70% / .6);
+  border-radius: 100px;
+  box-shadow: inset 0 0 25px hsla(150 70% 70% / .7);
+  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 20;
+}
+
+.co {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background: hsla(var(--hue) 70% 70% / .9);
+  position: fixed;
+  transition: 1s;
+}
+
+
+#popping-area{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vh;
+  height: 80vh;
+  border-radius: 50%;
+  box-shadow:
+              rgb(180, 180, 180) 15px 15px 36px,
+              rgb(255, 255, 255) -15px -15px 24px;
+  overflow: hidden;
+}
+h1 {
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+#popping-area .area-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(7deg, rgba(255,0,0,.8), rgba(0,255,0,0) 70%),
+              linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,0,255,0) 70%),
+              linear-gradient(247deg, rgba(0,0,255,.8), rgba(255,0,0,0) 70%),
+              linear-gradient(67deg, rgba(255,255,0,.8), rgba(255,0,255,0) 70%),
+              linear-gradient(187deg, rgba(0,255,255,.8), rgba(255,255,0,0) 70%),
+              linear-gradient(307deg, rgba(255,0,255,.8), rgba(0,255,255,0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+span {
+  display: inline-block;
+  font-size: 7.2rem;
+}
+@media screen and (max-height: 640px) {
+  span {
+    font-size: 11vh;
+  } 
+}
